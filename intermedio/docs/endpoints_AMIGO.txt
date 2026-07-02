@@ -1,0 +1,259 @@
+============================================================
+  A.M.I.G.O. — LISTADO CONSOLIDADO DE ENDPOINTS
+  Datos Abiertos Colombia (datos.gov.co)
+  Fuentes: Inventario_datasets, Esquema_perfil_regional,
+           Informe_propuesta, DOCUMENTACION, Datasets_Endpoints
+============================================================
+
+PATRÓN BASE (API SODA):
+  https://www.datos.gov.co/resource/{ID}.json
+
+PARÁMETROS ÚTILES:
+  $where=cole_mcpio_ubicacion='CALI'
+  $select=col1,col2,...
+  $limit=100
+  $order=campo DESC
+  $q=texto libre
+
+============================================================
+GRUPO A — DESEMPEÑO EDUCATIVO
+============================================================
+
+1. Resultados únicos Saber 11
+   ID      : kgxf-xxbe
+   Endpoint: https://www.datos.gov.co/resource/kgxf-xxbe.json
+   Portal  : https://www.datos.gov.co/Educaci-n/Resultados-nicos-Saber-11/kgxf-xxbe
+   Entidad : ICFES
+   Uso     : Desempeño académico por municipio (matemáticas, lectura, etc.)
+   Cols MVP: punt_global, punt_matematicas, punt_lectura_critica,
+             cole_mcpio_ubicacion, cole_depto_ubicacion,
+             cole_naturaleza, cole_area_ubicacion,
+             fami_estratovivienda, estu_genero, periodo
+
+2. Resultados Pruebas Saber 3°, 5° y 9°
+   ID      : 4h84-62xp
+   Endpoint: https://www.datos.gov.co/resource/4h84-62xp.json
+   Portal  : https://www.datos.gov.co/dataset/Resultados-Pruebas-Saber-3-5-y-9-/4h84-62xp
+   Entidad : ICFES
+   Uso     : Desempeño primaria/secundaria — MÁS RELEVANTE para público 7-12 años
+   Nota    : Verificar nombres exactos de columnas antes de integrar
+
+3. MEN — Educación preescolar, básica y media por MUNICIPIO
+   ID      : nudc-7mev
+   Endpoint: https://www.datos.gov.co/resource/nudc-7mev.json
+   Portal  : https://www.datos.gov.co/Educaci-n/MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR-B-SICA/nudc-7mev
+   Entidad : Ministerio de Educación Nacional (MEN)
+   Uso     : Cobertura, deserción, reprobación, repitencia por municipio
+   Filas   : 15.707 | Columnas: 41 | Actualizado: 2025-11-13
+
+4. MEN — Educación preescolar, básica y media por DEPARTAMENTO
+   ID      : ji8i-4anb
+   Endpoint: https://www.datos.gov.co/resource/ji8i-4anb.json
+   Portal  : https://www.datos.gov.co/Educaci-n/MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR-B-SICA/ji8i-4anb
+   Entidad : Ministerio de Educación Nacional (MEN)
+   Uso     : Respaldo cuando faltan datos municipales
+   Filas   : 462 | Columnas: 37 | Actualizado: 2025-11-13
+
+5. MEN — Educación por ETC (Entidad Territorial Certificada)
+   ID      : sras-4t5p
+   Endpoint: https://www.datos.gov.co/resource/sras-4t5p.json
+   Portal  : https://www.datos.gov.co/Educaci-n/MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR-B-SICA/sras-4t5p
+   Entidad : MEN
+   Uso     : Indicadores por Secretaría de Educación / alianzas institucionales
+
+6. MEN — Matrícula por municipio
+   ID      : y9ga-zwzy
+   Endpoint: https://www.datos.gov.co/resource/y9ga-zwzy.json
+   Portal  : https://www.datos.gov.co/Educaci-n/MEN_ESTADISTICAS-MATRICULA-POR-MUNICIPIOS_ES/y9ga-zwzy
+   Entidad : MEN
+   Uso     : Población estudiantil, impacto potencial, normalizar indicadores
+
+7. Resultados únicos Saber Pro (opcional / educación superior)
+   ID      : u37r-hjmu
+   Endpoint: https://www.datos.gov.co/resource/u37r-hjmu.json
+   Portal  : https://www.datos.gov.co/Educaci-n/Resultados-nicos-Saber-Pro/u37r-hjmu
+   Entidad : ICFES
+   Uso     : Complemento para jóvenes que transitan a la universidad
+
+============================================================
+GRUPO B — BIENESTAR Y RIESGO
+============================================================
+
+8. Encuesta de Convivencia y Seguridad Ciudadana (ECSC)
+   ID      : qawu-zaae
+   Endpoint: https://www.datos.gov.co/resource/qawu-zaae.json
+   Portal  : https://www.datos.gov.co/dataset/Encuesta-de-Convivencia-y-Seguridad-Ciudadana-ECSC/qawu-zaae
+   Entidad : DANE
+   Uso     : Percepción de seguridad y convivencia por ciudad — módulo de alertas
+
+9. Batería de indicadores de niñez y adolescencia
+   ID      : v9qk-hdcc
+   Endpoint: https://www.datos.gov.co/resource/v9qk-hdcc.json
+   Portal  : https://www.datos.gov.co/dataset/Bater-a-de-indicadores-de-ni-ez-y-adolescencia/v9qk-hdcc
+   Entidad : (múltiples entidades)
+   Uso     : Contexto social infantil — módulo de protección y bienestar
+
+10. MEN — Indicadores PAE (Programa de Alimentación Escolar)
+    ID      : epkg-mphw
+    Endpoint: https://www.datos.gov.co/resource/epkg-mphw.json
+    Portal  : https://www.datos.gov.co/Educaci-n/MEN_INDICADORES_PAE/epkg-mphw
+    Entidad : MEN
+    Uso     : Relacionar alimentación escolar con permanencia / vulnerabilidad
+
+11. MEN — Indicadores Primera Infancia
+    ID      : 3y4s-dmxy
+    Endpoint: https://www.datos.gov.co/resource/3y4s-dmxy.json
+    Portal  : https://www.datos.gov.co/Educaci-n/MEN_INDICADORES_PRIMERA_INFANCIA/3y4s-dmxy
+    Entidad : MEN
+    Uso     : Condiciones educativas tempranas / perfil territorial infantil
+
+12. MEN — Matrícula de migrantes
+    ID      : enmx-7kvv
+    Endpoint: https://www.datos.gov.co/resource/enmx-7kvv.json
+    Portal  : https://www.datos.gov.co/Educaci-n/MEN_MATRICULA_MIGRANTES_EN_EDUCACION_BASICA_Y_MEDI/enmx-7kvv
+    Entidad : MEN
+    Uso     : Detectar población migrante / adaptar contenidos interculturales
+
+13. Cobertura educativa — Población con discapacidad
+    ID      : 52mm-fccv
+    Endpoint: https://www.datos.gov.co/resource/52mm-fccv.json
+    Portal  : https://www.datos.gov.co/dataset/COBERTURA-EDUCATIVA-POBLACION-CARACTERIZADA-CON-DI/52mm-fccv
+    Entidad : MEN
+    Uso     : Criterios de accesibilidad e inclusión educativa
+
+--- SIN ENDPOINT SODA (descarga directa en la entidad) ---
+
+14. Intento de suicidio (SIVIGILA — evento cód. 356)
+    ID Socrata: No disponible
+    Portal  : https://www.ins.gov.co/buscador-eventos
+    Alternativa: SISPRO / datos abiertos de salud
+    Entidad : Instituto Nacional de Salud (INS)
+    Uso     : Línea base psicosocial territorial — ponderar alertas del módulo NLP
+
+15. ICBF — Vulneración / restablecimiento de derechos de NNA
+    ID Socrata: No disponible (existe ficha de proyecto Big Data, no dataset abierto)
+    Portal  : https://www.icbf.gov.co/estadisticas
+    Entidad : ICBF
+    Uso     : Contexto de violencia/maltrato infantil por municipio — monitorear disponibilidad
+
+============================================================
+GRUPO C — CONTEXTO SOCIOECONÓMICO Y DIGITAL
+============================================================
+
+16. MinTIC — Internet fijo por tecnología y segmento
+    ID      : n48w-gutb
+    Endpoint: https://www.datos.gov.co/resource/n48w-gutb.json
+    Portal  : https://www.datos.gov.co/Ciencia-Tecnolog-a-e-Innovaci-n/Internet-Fijo-Accesos-por-tecnolog-a-y-segmento/n48w-gutb
+    Entidad : MinTIC
+    Uso     : Brecha digital territorial / modo offline / contenido ligero
+    Filas   : 2.795.052 | Columnas: 12 | Actualizado: 2024-02-23
+
+17. Conectividad a internet en instituciones educativas
+    ID      : px6y-fznz
+    Endpoint: https://www.datos.gov.co/resource/px6y-fznz.json
+    Portal  : https://www.datos.gov.co/dataset/SERVICIO-DE-CONECTIVIDAD-A-INTERNET-EN-INSTITUCION/px6y-fznz
+    Entidad : MinTIC / MEN
+    Uso     : Colegios con/sin internet — priorizar funciones offline
+
+18. Zonas WiFi gratuitas (nacional)
+    ID      : 9n9m-2dqq
+    Endpoint: https://www.datos.gov.co/resource/9n9m-2dqq.json
+    Portal  : https://www.datos.gov.co/dataset/SERVICIO-DE-CONECTIVIDAD-ZONAS-WIFI/9n9m-2dqq
+    Entidad : MinTIC
+    Uso     : Puntos de acceso público a internet
+
+19. Zonas WiFi gratuitas — Risaralda
+    ID      : 52st-rqi9
+    Endpoint: https://www.datos.gov.co/resource/52st-rqi9.json
+    Portal  : https://www.datos.gov.co/dataset/Zonas-WiFi-Gratuitas-del-Departamento-de-Risaralda/52st-rqi9
+    Entidad : Gobernación de Risaralda
+    Uso     : Piloto regional de conectividad
+
+--- SIN ENDPOINT SODA (descarga directa en la entidad) ---
+
+20. Proyecciones de población por municipio (CNPV 2018)
+    ID Socrata: No disponible
+    Portal  : https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion
+    Entidad : DANE
+    Uso     : Denominador de tasas (suicidio, deserción) comparables entre municipios
+
+21. Pobreza Multidimensional municipal (IPM)
+    ID Socrata: No disponible
+    Portal  : https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-multidimensional
+    Entidad : DANE
+    Uso     : Drivers socioeconómicos del bajo desempeño y la deserción
+
+============================================================
+GRUPO D — BASE GEOGRÁFICA (LLAVE DE UNIÓN)
+============================================================
+
+22. DIVIPOLA — Códigos municipios GEOLOCALIZADOS
+    ID      : vafm-j2df
+    Endpoint: https://www.datos.gov.co/resource/vafm-j2df.json
+    Portal  : https://www.datos.gov.co/Mapas-Nacionales/DIVIPOLA-C-digos-municipios-geolocalizados/vafm-j2df
+    Entidad : DANE / MinTIC
+    Uso     : LLAVE PRINCIPAL — une todos los datasets + coordenadas para Leaflet.js
+    Filas   : 1.121 | Columnas: 8 | Actualizado: 2021-11-05
+
+23. DIVIPOLA — Códigos municipios (sin coordenadas)
+    ID      : gdxc-w37w
+    Endpoint: https://www.datos.gov.co/resource/gdxc-w37w.json
+    Portal  : https://www.datos.gov.co/Mapas-Nacionales/DIVIPOLA-C-digos-municipios/gdxc-w37w
+    Entidad : DANE / MinTIC
+    Uso     : Tabla de referencia para estandarizar nombres y códigos
+    Filas   : 1.122 | Columnas: 7 | Actualizado: 2025-01-24
+
+============================================================
+GRUPO E — DIRECTORIO Y TERRITORIO
+============================================================
+
+24. Directorio Único de Establecimientos Educativos (DUE)
+    ID      : 28t6-6wvz
+    Endpoint: https://www.datos.gov.co/resource/28t6-6wvz.json
+    Portal  : https://www.datos.gov.co/dataset/Directorio-nico-de-establecimientos-educativos-DUE/28t6-6wvz
+    Entidad : MEN
+    Uso     : Mapa de colegios (Leaflet.js) — nombre, dirección, jornada, zona, sector
+
+25. Establecimientos Educativos Oficiales
+    ID      : qnhy-zizv
+    Endpoint: https://www.datos.gov.co/resource/qnhy-zizv.json
+    Portal  : https://www.datos.gov.co/dataset/Establecimientos-Educativos-Oficiales/qnhy-zizv
+    Entidad : MEN
+    Uso     : Georreferenciar instituciones educativas oficiales
+
+26. Población por grados escolares — municipios Valle del Cauca
+    ID      : pvpi-9wjb
+    Endpoint: https://www.datos.gov.co/resource/pvpi-9wjb.json
+    Portal  : https://www.datos.gov.co/w/pvpi-9wjb
+    Entidad : Gobernación del Valle del Cauca
+    Uso     : Contexto local (Cali y alrededores) — población estudiantil por grado
+
+============================================================
+ENDPOINTS DE METADATOS / API (uso técnico)
+============================================================
+
+  Contar filas de un dataset:
+  https://www.datos.gov.co/resource/{id}.json?$select=count(*)
+
+  Metadatos completos (columnas, fecha actualización, etc.):
+  https://www.datos.gov.co/api/views/{id}.json
+
+  Ejemplo endpoint con filtro (Saber 11 — matemáticas Cali):
+  https://www.datos.gov.co/resource/kgxf-xxbe.json?$select=cole_mcpio_ubicacion,punt_matematicas&$where=cole_mcpio_ubicacion='CALI'&$limit=50
+
+============================================================
+RESUMEN: 26 fuentes identificadas
+  Con endpoint SODA (listas para usar): 21
+  Sin endpoint SODA (descarga directa): 5
+    - INS/SIVIGILA (intento suicidio)
+    - ICBF (vulneración derechos NNA)
+    - DANE (proyecciones de población)
+    - DANE (IPM / Pobreza Multidimensional)
+
+Fuentes revisadas:
+  - Inventario_datasets_AMIGO.xlsx
+  - Esquema_perfil_regional_AMIGO.xlsx
+  - Informe_propuesta_AMIGO.docx
+  - DOCUMENTACION.docx
+  - Datasets_Endpoints_AMIGO.docx
+============================================================

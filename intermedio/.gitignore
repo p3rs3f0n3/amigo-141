@@ -1,0 +1,47 @@
+# Variables de entorno — NUNCA subir al repo
+.env
+
+# Entorno virtual Python
+venv/
+env/
+.venv/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Datos crudos y modelos pesados (usar Git LFS si se necesitan)
+data/01_raw/*.csv
+data/01_raw/*.json
+models/*.pkl
+models/*.joblib
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/settings.json
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Reportes temporales
+reports/figures/*.tmp
+
+# Node (frontend)
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/dist/
